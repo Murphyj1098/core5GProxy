@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from core.api.grpc import client
 from core.api.grpc.wrappers import Position, Interface, Session, Node
 
@@ -22,8 +20,6 @@ def main():
     core = client.CoreGrpcClient()
     core.connect()
     session = core.create_session()
-
-    
 
     core.start_session(session)
     

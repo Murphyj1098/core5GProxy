@@ -11,7 +11,9 @@ session = core.create_session()
 position = Position(x=100, y=100)
 node1 = session.add_node(1, position=position)
 position = Position(x=300, y=100)
-node2 = session.add_node(2, position=position)
+node2 = session.add_node(2, position=position, name="OldName")
+
+node2.name = "NewName"
 
 iface1 = iface_helper.create_iface(node1.id, 0)
 iface2 = iface_helper.create_iface(node2.id, 0)
